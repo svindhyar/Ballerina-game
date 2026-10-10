@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#180f2a" />
+    <meta
+      name="description"
+      content="A tiny ballet-inspired endless runner. Leap over pointe shoes and dance for a new high score."
+    />
+    <title>Prima — a tiny ballet adventure</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./game.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="/" aria-label="Prima home">
+          <span class="wordmark-icon" aria-hidden="true">✳</span>
+          prima
+        </a>
+        <p class="topbar-note">A tiny ballet adventure</p>
+        <div class="topbar-actions">
+          <button class="music-button" id="music-button" type="button" aria-pressed="true" aria-label="Turn music off">
+            <span class="music-note" aria-hidden="true">♫</span><span id="music-label">MUSIC ON</span>
+          </button>
+          <a class="topbar-link" href="#how-to-play">How to play <span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <section class="game-section" aria-label="Prima ballet runner game">
+        <div class="intro">
+          <p class="eyebrow"><span></span> THE SHOW MUST GO ON</p>
+          <h1>Find your <em>rhythm.</em></h1>
+          <p class="intro-copy">Leap, pirouette, repeat. How long can you stay on your toes?</p>
+        </div>
+
+        <div class="game-card">
+          <div class="game-topline">
+            <div class="stage-label"><span class="live-dot"></span><span id="stage-status">THE STAGE IS YOURS</span></div>
+            <div class="scoreboard" aria-label="Score">
+              <div class="score-item"><span class="score-label">SCORE</span><span id="score">00000</span></div>
+              <span class="score-divider" aria-hidden="true"></span>
+              <div class="score-item"><span class="score-label">BEST</span><span id="best-score">00000</span></div>
+            </div>
+          </div>
+
+          <div class="canvas-wrap" id="canvas-wrap">
+            <canvas id="game-canvas" aria-label="Ballerina endless runner game. Press space or tap to jump." role="img"></canvas>
+
+            <div class="game-overlay" id="game-overlay">
+              <div class="overlay-sparkle" aria-hidden="true">✳</div>
+              <p class="overlay-kicker" id="overlay-kicker">CURTAIN UP</p>
+              <h2 id="overlay-title">Ready to dance?</h2>
+              <p class="overlay-copy" id="overlay-copy">The stage is scattered with pointe shoes.<br />Show them what you’ve got.</p>
+              <button class="primary-button" id="start-button" type="button">
+                <span id="button-label">Take the stage</span><span class="button-arrow" aria-hidden="true">→</span>
+              </button>
+              <p class="overlay-hint" id="overlay-hint">PRESS SPACE OR TAP TO JUMP</p>
+            </div>
+
+            <button class="pause-button" id="pause-button" type="button" aria-label="Pause game" hidden>
+              <span class="pause-icon" aria-hidden="true">Ⅱ</span>
+            </button>
+          </div>
+
+          <div class="game-footer">
+            <span><span class="keycap">SPACE</span> or <span class="keycap">↑</span> to leap</span>
+            <span class="footer-center">LOOK OUT FOR THE POINTE SHOES <span aria-hidden="true">✦</span></span>
+            <span>tap anywhere to jump <span aria-hidden="true">↗</span></span>
+          </div>
+        </div>
+
+        <div class="below-game" id="how-to-play">
+          <p class="tip-icon" aria-hidden="true">✧</p>
+          <p><strong>Stay light on your feet.</strong> Time each leap to clear the shoes. The tempo picks up as your score grows.</p>
+          <p class="credit">MADE FOR THE LOVE OF DANCE <span aria-hidden="true">♡</span></p>
+        </div>
+      </section>
+      <footer class="page-footer"><span class="creator-credit">Viniverse by Vindhya</span><span class="footer-divider" aria-hidden="true">·</span>A little practice, a little magic.<span aria-hidden="true">✳</span></footer>
+    </main>
+  </body>
+</html>
