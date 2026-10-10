@@ -66,6 +66,8 @@ a { color: inherit; text-decoration: none; }
 h1 { font-family: "Playfair Display", Georgia, serif; font-size: clamp(38px, 5vw, 54px); line-height: 1.1; letter-spacing: -1.7px; margin: 0; font-weight: 600; }
 h1 em { color: var(--pink); font-weight: 600; }
 .intro-copy { color: #b7aabd; font-size: 13px; margin: 11px 0 0; }
+.creator-byline { color: #c9b4ca; font-size: 10px; letter-spacing: .04em; margin: 14px 0 0; }
+.creator-byline strong { color: #f0b3c8; font-weight: 600; }
 
 .game-card {
   overflow: hidden;
@@ -108,6 +110,9 @@ canvas { display: block; width: 100%; height: 100%; touch-action: manipulation; 
 .overlay-kicker { font-size: 9px; font-weight: 700; color: #e8a3ba; letter-spacing: .22em; margin: 0 0 8px; }
 .game-overlay h2 { font-family: "Playfair Display", Georgia, serif; font-size: clamp(27px, 3.5vw, 36px); letter-spacing: -.6px; margin: 0; }
 .overlay-copy { color: #d0c2d5; font-size: 12px; line-height: 1.7; margin: 10px 0 19px; }
+.overlay-creator { display: inline-flex; align-items: center; gap: 5px; margin: -7px 0 18px; color: #ffd2df; font-size: 14px; font-weight: 700; letter-spacing: .025em; text-shadow: 0 0 20px rgba(245, 168, 191, .24); }
+.overlay-creator span { color: var(--pink); font-size: 16px; font-weight: 400; }
+.overlay-creator:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 2px; }
 .primary-button {
   min-height: 42px;
   padding: 0 17px 0 20px;
@@ -158,6 +163,9 @@ canvas { display: block; width: 100%; height: 100%; touch-action: manipulation; 
 .page-footer span { color: #c98da5; }
 .page-footer .creator-credit { color: #ddacc0; font-weight: 600; letter-spacing: .04em; }
 .page-footer .footer-divider { color: #746880; }
+.linkedin-link { color: #e9b2c7; font-weight: 600; }
+.linkedin-link span { color: var(--pink); padding-left: 2px; }
+.linkedin-link:focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 2px; }
 
 @media (min-width: 1200px) { .canvas-wrap { height: 460px; } }
 @media (max-width: 650px) {
@@ -180,5 +188,6 @@ canvas { display: block; width: 100%; height: 100%; touch-action: manipulation; 
   .footer-center { display: none; }
   .below-game { align-items: flex-start; padding: 12px 1px 15px; line-height: 1.6; }
   .credit { display: none; }
+  .page-footer { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
